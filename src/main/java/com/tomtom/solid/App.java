@@ -7,6 +7,9 @@ public class App {
 
     public static void main(final String[] args) {
 
+        int frc = Integer.parseInt(args[0]);
+        int fow = Integer.parseInt(args[1]);
+
         RoadElementProvider roadElementProvider = new RoadElementProvider();
         roadElementProvider.initialize();
         List<RoadElement> roadElements = roadElementProvider.getRoadElements(100);
@@ -15,8 +18,6 @@ public class App {
             System.out.println(roadElement);
         }
 
-        int frc = 5; // single carriage road
-        int fow = 0; // highway
 
         List<RoadElement> filteredResult = getElementsWithFOW(getElementsWithFRC(roadElements, frc), fow);
 
