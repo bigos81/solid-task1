@@ -15,8 +15,8 @@ public class App {
             System.out.println(roadElement);
         }
 
-        int frc = 5; // single carriage road
-        int fow = 0; // highway
+        int frc = 0; // highway
+        int fow = 2; // single carriage way
 
         List<RoadElement> filteredResult = getElementsWithFOW(getElementsWithFRC(roadElements, frc), fow);
 
