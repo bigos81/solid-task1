@@ -18,7 +18,6 @@ public class App {
             System.out.println(roadElement);
         }
 
-
         List<RoadElement> filteredResult = getElementsWithFOW(getElementsWithFRC(roadElements, frc), fow);
 
         double sumLength = 0.0;
